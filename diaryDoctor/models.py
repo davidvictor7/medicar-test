@@ -8,10 +8,10 @@ from doctor.models import Doctor
 
 # Create your models here.
 class DiaryDoctor(models.Model):
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
     day = models.DateField(
         auto_now=False, auto_now_add=False, default=timezone.now)
     freeDay = models.BooleanField(default=True)
-    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
 
     def clean_date(self):
         def validate_day():
