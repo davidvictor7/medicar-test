@@ -17,11 +17,13 @@ from diaryDoctor.api.viewsets import DiaryDoctorViewSet
 from django.contrib import admin
 from django.urls import include, path
 from doctor.api.viewsets import DoctorViewSet
+from queryPatient.api.viewsets import QueryPatientViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'doctor', DoctorViewSet)
 router.register(r'diaryDoctor', DiaryDoctorViewSet)
+router.register(r'queryPatient', QueryPatientViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

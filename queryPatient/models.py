@@ -1,4 +1,3 @@
-from pydoc import Doc
 
 from diaryDoctor.models import DiaryDoctor, Times
 from django.db import models
@@ -13,3 +12,6 @@ class QueryPatient(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
     patient = models.ForeignKey(User, on_delete=models.CASCADE)
     daySchedule = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Paciente: {self.patient} - Dia Marcado: {self.daySchedule}"
