@@ -76,3 +76,5 @@ A aplicação possui as seguintes Ações:
 - Desmarcar consulta
 
 ## OBS
+- Usuario para logar na interface administrativa e cadastrar agendas:
+   * Username: gestorMedicar / Password: web@1234
