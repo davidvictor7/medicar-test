@@ -73,6 +73,6 @@ A aplicação possui as seguintes Ações:
 - Criar agenda para médicos
 - Listar agendas disponíveis
 - Marcar consulta (Falta)
-- Desmarcar consulta (Falta)
+- Desmarcar consulta
 
 ## OBS
