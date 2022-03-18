@@ -25,10 +25,10 @@ class DiaryDoctor(models.Model):
         def validate_diary_doc():
             try:
                 diaryDoc = DiaryDoctor.objects.filter(
-                    medico=self.doctor, dia=self.day).get()
+                    doctor=self.doctor, day=self.day).get()
                 raise ValidationError(
-                    {'Médico já possue uma agenda marcada'})
-            except diaryDoc.DoesNotExist:
+                    {'Médico já possue uma agenda marcada nesse dia!'})
+            except DiaryDoctor.DoesNotExist:
                 pass
 
         validate_date()
@@ -52,10 +52,11 @@ class Times(models.Model):
             try:
                 hourValue = Times.objects.filter(
                     diary=self.diary, hour=self.hour).get()
-                raise ValidationError({'Agenda já existe'})
-            except hourValue.DoesNotExist:
+                raise ValidationError(
+                    {'Horário já existe na data em questão!'})
+            except Times.DoesNotExist:
                 pass
         validate_hour()
 
     def __str__(self):
-        return f"Agenda {self.diary.id} Horário {self.hour} - {self.diary.day}"
+        return f"Agenda {self.diary.id} - Médico: {self.diary.doctor.name} - Horário: {self.hour} - Dia: {self.diary.day}"

@@ -23,5 +23,5 @@ class HoursManagement(models.Manager):
                     diary__day__gt=date.today(), hour__gte=timeFormat)
             ),
             freeHour=True
-        )
+        ).order_by('hour')
         return availableHour

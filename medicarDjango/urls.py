@@ -23,7 +23,7 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 router.register(r'doctor', DoctorViewSet)
 router.register(r'diaryDoctor', DiaryDoctorViewSet)
-router.register(r'queryPatient', QueryPatientViewSet)
+router.register(r'queryPatient', QueryPatientViewSet, basename='queryPatient')
 
 urlpatterns = [
     path('', include(router.urls)),
