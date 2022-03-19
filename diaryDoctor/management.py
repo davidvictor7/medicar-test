@@ -14,13 +14,13 @@ class DiaryManagement(models.Manager):
 
 class HoursManagement(models.Manager):
     def available(self):
-        timeFormat = datetime.strptime('00:00', '%H:%M')
-        time = timezone.localtime(timezone.now())
+        format_hour = datetime.strptime('00:00', '%H:%M')
+        hour = timezone.localtime(timezone.now())
 
         availableHour = super().get_queryset().filter(
             (
-                Q(diary__day=date.today(), hour__gte=time) | Q(
-                    diary__day__gt=date.today(), hour__gte=timeFormat)
+                Q(diary__day=date.today(), hour__gte=hour) | Q(
+                    diary__day__gt=date.today(), hour__gte=format_hour)
             ),
             freeHour=True
         ).order_by('hour')

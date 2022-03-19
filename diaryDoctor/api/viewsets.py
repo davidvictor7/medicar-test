@@ -6,9 +6,7 @@ from rest_framework.viewsets import ModelViewSet
 
 
 class DiaryDoctorViewSet(ModelViewSet):
-    """
-    A simple ViewSet for viewing and editing accounts.
-    """
+
     queryset = DiaryDoctor.objects.all()
     serializer_class = DiaryDoctorSerializer
     filter_backends = [DjangoFilterBackend]
@@ -22,8 +20,6 @@ class DiaryDoctorViewSet(ModelViewSet):
 
 
 class TimesViewSet(ModelViewSet):
-    """
-    A simple ViewSet for viewing and editing accounts.
-    """
+
     queryset = Times.objects.all()
     serializer_class = TimesSerializer
