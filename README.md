@@ -72,7 +72,7 @@ A aplicação possui as seguintes Ações:
 - Cadastrar médicos
 - Criar agenda para médicos
 - Listar agendas disponíveis
-- Marcar consulta (Falta)
+- Marcar consulta (Não terminado!)
 - Desmarcar consulta
 
 ## OBS
