@@ -68,7 +68,7 @@ Tendo em vista que:
 
 ### Ações da aplicação
 
-A aplicação possui as seguintes Ações:
+A aplicação possui as seguintes ações:
 - Cadastrar médicos
 - Criar agenda para médicos
 - Listar agendas disponíveis
